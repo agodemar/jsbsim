@@ -1,0 +1,6 @@
+<map id="GetStdTemperature" name="GetStdTemperature">
+<area shape="rect" id="node2" href="$classJSBSim_1_1FGStandardAtmosphere.html#ab3581d12823ef4d9ac32881ba1afba7f" title="Returns the standard pressure at the specified altitude. " alt="" coords="216,5,331,32"/>
+<area shape="rect" id="node3" href="$classJSBSim_1_1FGStandardAtmosphere.html#a47e546bb56670eb8e930de99401770af" title="Returns the standard density at a specified altitude. " alt="" coords="406,31,514,57"/>
+<area shape="rect" id="node4" href="$classJSBSim_1_1FGStandardAtmosphere.html#a88a5ad46aad0721e2374180aab231c3f" title="Returns the standard sea level temperature in degrees Rankine. " alt="" coords="197,107,349,133"/>
+<area shape="rect" id="node5" href="$classJSBSim_1_1FGStandardAtmosphere.html#a143b774df7054fd0a55cc378550b2c43" title="Returns the ratio of the standard temperature at the supplied altitude over the standard sea level te..." alt="" coords="190,157,357,184"/>
+</map>

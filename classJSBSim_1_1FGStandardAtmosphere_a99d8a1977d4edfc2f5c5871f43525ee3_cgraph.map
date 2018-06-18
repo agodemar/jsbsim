@@ -1,0 +1,4 @@
+<map id="SetTemperature" name="SetTemperature">
+<area shape="rect" id="node2" href="$classJSBSim_1_1FGAtmosphere.html#a2739860a840fcea921d3b37e1958bac0" title="Returns the actual, modeled temperature at the current altitude in degrees Rankine. " alt="" coords="185,5,351,46"/>
+<area shape="rect" id="node3" href="$classJSBSim_1_1FGStandardAtmosphere.html#af0d6708b2772ef2460c715d9157be869" title="Calculate (or recalculate) the atmospheric pressure breakpoints at the altitudes in the standard temp..." alt="" coords="169,71,367,97"/>
+</map>
