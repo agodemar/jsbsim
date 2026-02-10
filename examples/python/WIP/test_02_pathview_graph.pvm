@@ -1,0 +1,253 @@
+{
+	"version": "1.0.0",
+	"metadata": {
+		"created": "2026-02-10T16:10:25.477Z",
+		"modified": "2026-02-10T16:10:25.477Z",
+		"name": "pathview_graph"
+	},
+	"graph": {
+		"nodes": [
+			{
+				"id": "43ff627f-2b6b-41f7-99bf-325784279ecb",
+				"type": "DynamicalSystem",
+				"name": "DynamicalSystem",
+				"position": {
+					"x": 840,
+					"y": 200
+				},
+				"inputs": [
+					{
+						"id": "43ff627f-2b6b-41f7-99bf-325784279ecb-input-0",
+						"nodeId": "43ff627f-2b6b-41f7-99bf-325784279ecb",
+						"name": "in 0",
+						"direction": "input",
+						"index": 0,
+						"color": "#969696"
+					}
+				],
+				"outputs": [
+					{
+						"id": "43ff627f-2b6b-41f7-99bf-325784279ecb-output-0",
+						"nodeId": "43ff627f-2b6b-41f7-99bf-325784279ecb",
+						"name": "out 0",
+						"direction": "output",
+						"index": 0,
+						"color": "#969696"
+					}
+				],
+				"params": {
+					"func_dyn": "f_aircraft"
+				}
+			},
+			{
+				"id": "b6ec4c74-4cfb-4a35-b6aa-8210bbc34ae6",
+				"type": "Source",
+				"name": "Source",
+				"position": {
+					"x": 510,
+					"y": 190
+				},
+				"inputs": [],
+				"outputs": [
+					{
+						"id": "b6ec4c74-4cfb-4a35-b6aa-8210bbc34ae6-output-0",
+						"nodeId": "b6ec4c74-4cfb-4a35-b6aa-8210bbc34ae6",
+						"name": "out",
+						"direction": "output",
+						"index": 0,
+						"color": "#969696"
+					}
+				],
+				"params": {
+					"func": "f_elevator_command_at_trim",
+					"_showOutputLabels": false
+				}
+			},
+			{
+				"id": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+				"type": "Adder",
+				"name": "Adder",
+				"position": {
+					"x": 670,
+					"y": 200
+				},
+				"inputs": [
+					{
+						"id": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd-input-0",
+						"nodeId": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+						"name": "in 0",
+						"direction": "input",
+						"index": 0,
+						"color": "#969696"
+					},
+					{
+						"id": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd-input-1",
+						"nodeId": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+						"name": "in 1",
+						"direction": "input",
+						"index": 1,
+						"color": "#969696"
+					}
+				],
+				"outputs": [
+					{
+						"id": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd-output-0",
+						"nodeId": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+						"name": "out",
+						"direction": "output",
+						"index": 0,
+						"color": "#969696"
+					}
+				],
+				"params": {}
+			},
+			{
+				"id": "a9c1fa10-7c06-48e0-a174-592d08723645",
+				"type": "StepSource",
+				"name": "StepSource",
+				"position": {
+					"x": 510,
+					"y": 270
+				},
+				"inputs": [],
+				"outputs": [
+					{
+						"id": "a9c1fa10-7c06-48e0-a174-592d08723645-output-0",
+						"nodeId": "a9c1fa10-7c06-48e0-a174-592d08723645",
+						"name": "out",
+						"direction": "output",
+						"index": 0,
+						"color": "#969696"
+					}
+				],
+				"params": {
+					"amplitude": "[-0.1, 0, 0.1, 0]",
+					"tau": "[10, 11, 12, 13]"
+				}
+			},
+			{
+				"id": "5e7e9570-fd81-4eac-ac19-453b8ee37627",
+				"type": "Scope",
+				"name": "Scope",
+				"position": {
+					"x": 1030,
+					"y": 290
+				},
+				"inputs": [
+					{
+						"id": "5e7e9570-fd81-4eac-ac19-453b8ee37627-input-0",
+						"nodeId": "5e7e9570-fd81-4eac-ac19-453b8ee37627",
+						"name": "in 0",
+						"direction": "input",
+						"index": 0,
+						"color": "#969696"
+					},
+					{
+						"id": "5e7e9570-fd81-4eac-ac19-453b8ee37627-input-1",
+						"nodeId": "5e7e9570-fd81-4eac-ac19-453b8ee37627",
+						"name": "in 1",
+						"direction": "input",
+						"index": 1,
+						"color": "#969696"
+					}
+				],
+				"outputs": [],
+				"params": {}
+			},
+			{
+				"id": "2531539e-4bf3-4862-b389-fa07d7078a86",
+				"type": "Amplifier",
+				"name": "Amplifier",
+				"position": {
+					"x": 840,
+					"y": 390
+				},
+				"inputs": [
+					{
+						"id": "2531539e-4bf3-4862-b389-fa07d7078a86-input-0",
+						"nodeId": "2531539e-4bf3-4862-b389-fa07d7078a86",
+						"name": "in 0",
+						"direction": "input",
+						"index": 0,
+						"color": "#969696"
+					}
+				],
+				"outputs": [
+					{
+						"id": "2531539e-4bf3-4862-b389-fa07d7078a86-output-0",
+						"nodeId": "2531539e-4bf3-4862-b389-fa07d7078a86",
+						"name": "out 0",
+						"direction": "output",
+						"index": 0,
+						"color": "#969696"
+					}
+				],
+				"params": {
+					"gain": "100"
+				}
+			}
+		],
+		"connections": [
+			{
+				"id": "08c530bd-d1ec-4a14-b11d-5d3b47116ca6",
+				"sourceNodeId": "b6ec4c74-4cfb-4a35-b6aa-8210bbc34ae6",
+				"sourcePortIndex": 0,
+				"targetNodeId": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+				"targetPortIndex": 0
+			},
+			{
+				"id": "96754ad3-d429-45ab-b1ba-c814c5343409",
+				"sourceNodeId": "a9c1fa10-7c06-48e0-a174-592d08723645",
+				"sourcePortIndex": 0,
+				"targetNodeId": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+				"targetPortIndex": 1
+			},
+			{
+				"id": "f103255b-552b-477c-9bba-4aa03124de91",
+				"sourceNodeId": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+				"sourcePortIndex": 0,
+				"targetNodeId": "43ff627f-2b6b-41f7-99bf-325784279ecb",
+				"targetPortIndex": 0
+			},
+			{
+				"id": "b2913476-f1ce-4617-a52c-e7cc609856f8",
+				"sourceNodeId": "43ff627f-2b6b-41f7-99bf-325784279ecb",
+				"sourcePortIndex": 0,
+				"targetNodeId": "5e7e9570-fd81-4eac-ac19-453b8ee37627",
+				"targetPortIndex": 0
+			},
+			{
+				"id": "08508ff9-1b32-4e06-802d-80d02f5a704d",
+				"sourceNodeId": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+				"sourcePortIndex": 0,
+				"targetNodeId": "2531539e-4bf3-4862-b389-fa07d7078a86",
+				"targetPortIndex": 0
+			},
+			{
+				"id": "77de46a6-bb70-4888-b8b5-1be91e537359",
+				"sourceNodeId": "2531539e-4bf3-4862-b389-fa07d7078a86",
+				"sourcePortIndex": 0,
+				"targetNodeId": "5e7e9570-fd81-4eac-ac19-453b8ee37627",
+				"targetPortIndex": 1
+			}
+		],
+		"annotations": []
+	},
+	"events": [],
+	"codeContext": {
+		"code": "import os\nimport jsbsim\nimport xml.etree.ElementTree as ET\nimport matplotlib.pyplot as plt\n\n# Relative path to the directory where the flight model is stored\n# Note - Aircraft directory needs to be writeable in order to modify the cg\nPATH_TO_JSBSIM_FILES=\"../..\"\n\nprint(f'=================================================================')\nprint(f'Current working directory: {os.getcwd()}')\n\n# Global variables that must be modified to match your particular need\n# The aircraft name\n# Note - It should match the exact spelling of the model file\nAIRCRAFT_NAME=\"global5000\"\n\n# Avoid flooding the console with log messages\njsbsim.FGJSBBase().debug_lvl = 0\n\n# Instantiate the FDMExec object and load the aircraft\nfdm = jsbsim.FGFDMExec(PATH_TO_JSBSIM_FILES)\n\nload_status = fdm.load_model(AIRCRAFT_NAME)\n\nprint(f'=================================================================')\n\nac_xml_tree = ET.parse(os.path.join(fdm.get_root_dir(), f'aircraft/{AIRCRAFT_NAME}/{AIRCRAFT_NAME}.xml'))\nac_xml_root = ac_xml_tree.getroot()\n\n# Get the empty weight from aircraft xml [assume lbs]\nfor x in ac_xml_root.findall('mass_balance'):\n        w = x.find('emptywt').text\n\nempty_weight = float(w)\n\n# Get the original CG from aircraft xml, assum inches from Construction axes origin\nfor loc in ac_xml_root.findall('mass_balance/location'):\n        x_cg_ = loc.find('x').text\n\nx_cg_0 = float(x_cg_)\n\n# Assume a payload, midweight, lb\npayload_0 = 15172/2\n\n# Fuel max for Global5000, lbm\nfuelmax = 8097.63\n\n# Assume the mass of fuel, half tanks, lb\nfuel_per_tank = fuelmax/2\n\n\n# Select a speed to run the simulation at, knots\nspeed_cas = 250\n\n# Assume a flight altitude\nh_ft_0 = 15000\n\n# Fuel max for Global5000, lbm\nfuelmax = 8097.63\n\nweight_0 = empty_weight + payload_0 + fuel_per_tank*3\n\n# Assume a zero flight path angle, gamma_0\ngamma_0 = 0\n\nprint(\"-----------------------------------------\")\nprint(\"Altitude {} ft, Weight {} lb, CoG-x {} in\".format(h_ft_0, weight_0, x_cg_0))\nprint(\"-----------------------------------------\")\nprint(\"Running simulation at initial CAS = {} kn, and Altitude = {} ft\".format(speed_cas, h_ft_0))\nprint(\"-----------------------------------------\")\n\n# Set engines running\nfdm['propulsion/set-running'] = -1\ntrim_results = []\ntrim_results_fcs = []\n\nfdm['ic/h-sl-ft'] = h_ft_0\nfdm['ic/vc-kts'] = speed_cas\nfdm['ic/gamma-deg'] = gamma_0\nfdm['propulsion/tank[0]/contents-lbs'] = fuel_per_tank\nfdm['propulsion/tank[1]/contents-lbs'] = fuel_per_tank\nfdm['propulsion/tank[2]/contents-lbs'] = fuel_per_tank\nfdm['inertia/pointmass-weight-lbs[0]'] = payload_0\n\n# Initialize the aircraft with initial conditions\nfdm.run_ic()\n\n# Run fdm model\nfdm.run()\n\n# Trim the aircraft to initial conditions\nfdm['simulation/do_simple_trim'] = 1\nfdm.run()\n\nprint(\"-----------------------------------------\")\n\ntrim_results.append((fdm['velocities/vc-kts'], fdm['aero/alpha-deg']))\ntrim_results_fcs.append((fdm['fcs/elevator-pos-rad'], fdm['fcs/elevator-pos-deg'], fdm['fcs/elevator-pos-norm']))\n\n# Print trim results\nprint(\"Trim results:\")\nprint(\"CAS (knots): {}\\nAoA (deg): {}\".format(trim_results[0][0], trim_results[0][1]))\nprint(\"Elevator pos (rad): {}\\nElevator pos (deg): {}\\nElevator pos (norm): {}\".format(trim_results_fcs[0][0], trim_results_fcs[0][1], trim_results_fcs[0][2]))\nprint(\"-----------------------------------------\")\n\n# An example of 'Dynamical function' that takes the elevator command as input and outputs the angle of attack\ndef f_aircraft(u, t):\n    fdm[\"fcs/elevator-cmd-norm\"] = u\n    fdm.run()\n    return fdm[\"aero/alpha-deg\"]\n\n# Constant signal function that outputs the elevator command (normalized) at trim\ndef f_elevator_command_at_trim(t):\n    return trim_results_fcs[0][2]\n\n"
+	},
+	"simulationSettings": {
+		"duration": "40.0",
+		"dt": "0.008333",
+		"solver": "SSPRK22",
+		"adaptive": true,
+		"atol": "",
+		"rtol": "",
+		"ftol": "",
+		"dt_min": "",
+		"dt_max": "",
+		"ghostTraces": 0,
+		"plotResults": true
+	}
+}
