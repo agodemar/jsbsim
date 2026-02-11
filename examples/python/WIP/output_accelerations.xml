@@ -1,0 +1,16 @@
+<?xml version="1.0"?>                                       
+
+<output name="accelerations.csv" rate="20" type="CSV">
+  <property> accelerations/pdot-rad_sec2 </property>		<!--  2 -->
+  <property> accelerations/qdot-rad_sec2 </property>		<!--  3 -->
+  <property> accelerations/rdot-rad_sec2 </property>		<!--  4 -->
+  <property> accelerations/udot-ft_sec2 </property>		<!--  5 -->
+  <property> accelerations/vdot-ft_sec2 </property> 		<!--  6 -->
+  <property> accelerations/wdot-ft_sec2 </property> 		<!--  7 -->
+  <property> accelerations/Nx </property>      <!-- 8 -->
+  <property> accelerations/Ny </property>     <!-- 9 -->
+  <property> accelerations/Nz </property>      <!-- 10 -->
+  <property> accelerations/n-pilot-x-norm </property>   <!-- 10 -->
+  <property> accelerations/n-pilot-y-norm </property>  <!-- 11 -->
+  <property> accelerations/n-pilot-z-norm </property>  <!-- 12 -->
+</output>

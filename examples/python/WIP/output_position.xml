@@ -1,0 +1,34 @@
+<?xml version="1.0"?>                                       
+
+<output name="position.csv" rate="20" type="CSV">
+  <property> position/h-sl-ft </property>            			<!--  2 -->
+  <property> position/h-sl-meters </property>            		<!--  3 -->
+  <property> position/h-agl-ft </property>            		<!--  4 -->
+  <property> position/lat-geod-rad </property>            	<!--  5 -->
+  <property> position/lat-geod-deg </property>            	<!--  6 -->
+  <property> position/lat-gc-rad </property>					<!--  7 -->
+  <property> position/lat-gc-deg </property>					<!--  8 -->
+  <property> position/long-gc-rad </property>					<!--  9 -->
+  <property> position/long-gc-deg </property>					<!-- 10 -->
+  <property> position/geod-alt-ft </property>            		<!-- 11 -->
+  <property> position/terrain-elevation-asl-ft </property>	<!-- 12 -->
+  <property> position/distance-from-start-lon-mt </property>	<!-- 13 -->
+  <property> position/distance-from-start-lat-mt </property>	<!-- 14 -->
+  <property> position/distance-from-start-mag-mt </property>	<!-- 15 -->
+  <property> ap/active-waypoint </property>                   <!-- 16 -->
+  <property> position/ned-x-relto-field-wp-ft </property>     <!-- 17 -->
+  <property> position/ned-y-relto-field-wp-ft </property>     <!-- 18 -->
+  <property> position/ned-z-relto-field-wp-ft </property>     <!-- 19 -->
+  <property> position/ned-h-relto-field-wp-ft </property>     <!-- 20 -->
+  <property> guidance/wp-distance </property>                 <!-- 21 -->
+  <property> guidance/field-wp-distance </property>           <!-- 22 -->
+  <property> position/ned-x-relto-field-wp-m </property>     <!-- 23 -->
+  <property> position/ned-y-relto-field-wp-m </property>     <!-- 24 -->
+  <property> position/ned-z-relto-field-wp-m </property>     <!-- 25 -->
+  <property> position/ned-h-relto-field-wp-m </property>     <!-- 26 -->
+  <property>guidance/target-wp-latitude-rad-ONE   </property><!-- 27 -->
+  <property>guidance/target-wp-longitude-rad-ONE  </property><!-- 28 -->
+  <property>guidance/target-field-wp-latitude-rad </property><!-- 29 -->
+  <property>guidance/target-field-wp-longitude-rad</property><!-- 30 -->
+  <property> position/h-agl-m </property>                    <!-- 31 -->
+</output>

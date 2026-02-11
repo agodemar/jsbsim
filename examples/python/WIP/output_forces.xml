@@ -1,0 +1,26 @@
+<?xml version="1.0"?>                                       
+
+<output name="forces.csv" rate="20" type="CSV">
+  <property>forces/fbx-aero-lbs </property>             <!--  2 -->
+  <property>forces/fby-aero-lbs </property>             <!--  3 -->
+  <property>forces/fbz-aero-lbs </property>             <!--  4 -->
+  <property>forces/fwx-aero-lbs </property>             <!--  5 -->
+  <property>forces/fwy-aero-lbs </property>             <!--  6 -->
+  <property>forces/fwz-aero-lbs </property>             <!--  7 -->
+  <property>forces/fbx-gear-lbs </property>             <!--  8 -->
+  <property>forces/fby-gear-lbs </property>             <!--  9 -->
+  <property>forces/fbz-gear-lbs </property>             <!-- 10 -->
+  <property>forces/fbx-total-lbs </property>            <!-- 11 -->
+  <property>forces/fby-total-lbs </property>            <!-- 12 -->
+  <property>forces/fbz-total-lbs </property>            <!-- 13 -->
+  <property>forces/load-factor </property>              <!-- 14 -->
+  <property>moments/l-aero-lbsft </property>            <!-- 15 -->
+  <property>moments/m-aero-lbsft </property>            <!-- 16 -->
+  <property>moments/n-aero-lbsft </property>            <!-- 17 -->
+  <property>moments/l-gear-lbsft </property>            <!-- 18 -->
+  <property>moments/m-gear-lbsft </property>            <!-- 19 -->
+  <property>moments/n-gear-lbsft </property>            <!-- 20 -->
+  <property>moments/l-total-lbsft </property>           <!-- 21 -->
+  <property>moments/m-total-lbsft </property>           <!-- 22 -->
+  <property>moments/n-total-lbsft </property>           <!-- 23 -->
+</output>

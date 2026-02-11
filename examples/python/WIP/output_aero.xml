@@ -1,0 +1,48 @@
+<?xml version="1.0"?>                                       
+
+<output name="aero.csv" rate="20" type="CSV">
+  <property> aero/alpha-rad </property>            		<!--  2 -->
+  <property> aero/beta-rad</property>            			<!--  3 -->
+  <property> aero/alpha-deg</property>            		<!--  4 -->
+  <property> aero/beta-deg</property>            			<!--  5 -->
+  <property> aero/Re</property>            				<!--  6 -->
+  <property> aero/qbar-psf</property>            			<!--  7 -->
+  <property> aero/alphadot-rad_sec</property>            	<!--  8 -->
+  <property> aero/betadot-rad_sec</property>            	<!--  9 -->
+  <property> aero/alphadot-deg_sec</property>            	<!-- 10 -->
+  <property> aero/betadot-deg_sec</property>            	<!-- 11 -->
+  <property> aero/coefficient/CDo</property>            	<!-- 12 -->
+  <property> aero/coefficient/CDDf</property>            	<!-- 13 -->
+  <property> aero/coefficient/CDwbh</property>            <!-- 14 -->
+  <property> aero/coefficient/CDDe</property>            	<!-- 15 -->
+  <property> aero/coefficient/CDbeta</property>           <!-- 16 -->
+  <property> aero/coefficient/CYb</property>            	<!-- 17 -->
+  <property> aero/coefficient/CYda</property>            	<!-- 18 -->
+  <property> aero/coefficient/CYdr</property>            	<!-- 19 -->
+  <property> aero/coefficient/CYp</property>            	<!-- 20 -->
+  <property> aero/coefficient/CYr</property>            	<!-- 21 -->
+  <property> aero/coefficient/CLwbh</property>            <!-- 22 -->
+  <property> aero/coefficient/CLDf</property>            	<!-- 23 -->
+  <property> aero/coefficient/CLDe</property>            	<!-- 24 -->
+  <property> aero/coefficient/CLadot</property>           <!-- 25 -->
+  <property> aero/coefficient/CLq</property>            	<!-- 26 -->
+  <property> aero/coefficient/Clb</property>            	<!-- 27 -->
+  <property> aero/coefficient/Clp</property>            	<!-- 28 -->
+  <property> aero/coefficient/Clr</property>            	<!-- 29 -->
+  <property> aero/coefficient/Clda</property>            	<!-- 30 -->
+  <property> aero/coefficient/Cldr</property>            	<!-- 31 -->
+  <property> aero/coefficient/Cmo</property>           	<!-- 32 -->
+  <property> aero/coefficient/Cmalpha</property>          <!-- 33 -->
+  <property> aero/coefficient/CmDf</property>            	<!-- 34	-->
+  <property> aero/coefficient/Cmq</property>            	<!-- 35 -->
+  <property> aero/coefficient/Cmadot</property>           <!-- 36 -->
+  <property> aero/coefficient/Cmde</property>            	<!-- 37 -->
+  <property> aero/coefficient/Cnb</property>            	<!-- 38 -->
+  <property> aero/coefficient/Cnp</property>            	<!-- 39 -->
+  <property> aero/coefficient/Cnr</property>            	<!-- 40 -->
+  <property> aero/coefficient/Cnda</property>            	<!-- 41 -->
+  <property> aero/coefficient/Cndr</property>            	<!-- 42 -->
+  <property> aero/h_b-cg-ft</property>                	<!-- 43 -->
+  <property> aero/h_b-mac-ft</property>                	<!-- 44 -->
+  <property> aero/function/ground-effect-factor-lift</property> <!-- 45 -->
+</output>

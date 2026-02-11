@@ -1,0 +1,30 @@
+<?xml version="1.0"?>                                       
+
+<output name="velocities.csv" rate="20" type="CSV">
+  <property> velocities/u-fps </property>            <!--  2 -->
+  <property> velocities/v-fps </property>            <!--  3 -->
+  <property> velocities/w-fps </property>            <!--  4 -->
+  <property> velocities/p-rad_sec </property>        <!--  5 -->
+  <property> velocities/q-rad_sec </property>        <!--  6 -->
+  <property> velocities/r-rad_sec </property>        <!--  7 -->
+  <property>velocities/p-aero-rad_sec</property>	   <!--  8 -->
+  <property>velocities/q-aero-rad_sec</property>	   <!--  9 -->
+  <property>velocities/r-aero-rad_sec</property>	   <!-- 10 -->
+  <property>velocities/phidot-rad_sec</property>	   <!-- 11 -->
+  <property>velocities/thetadot-rad_sec</property>   <!-- 12 -->
+  <property>velocities/psidot-rad_sec</property>	   <!-- 13 -->
+  <property>velocities/u-aero-fps</property>		   <!-- 14 -->
+  <property>velocities/v-aero-fps</property>		   <!-- 15 -->
+  <property>velocities/w-aero-fps</property>		   <!-- 16 -->
+  <property>velocities/vc-fps</property>			   <!-- 17 -->
+  <property>velocities/vt-fps</property>			   <!-- 18 -->
+  <property>velocities/mach</property>			   <!-- 19 -->
+  <property>velocities/p-deg_sec</property>	   <!--  20 -->
+  <property>velocities/q-deg_sec</property>	   <!--  21 -->
+  <property>velocities/r-deg_sec</property>	   <!-- 22 -->
+  <property>velocities/vt-kts</property>       <!-- 23 -->
+  <property>velocities/vtrue-kts</property>    <!-- 24 -->
+  <property>velocities/vtrue-fps</property>    <!-- 25 -->
+  <property>velocities/vg-kts</property>    <!-- 26 -->
+  <property>velocities/vg-fps</property>    <!-- 27 -->
+</output>

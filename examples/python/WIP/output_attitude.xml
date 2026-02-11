@@ -1,0 +1,15 @@
+<?xml version="1.0"?>                                       
+
+<output name="attitude.csv" rate="20" type="CSV">
+  <property> attitude/phi-rad </property>            <!--  2 -->
+  <property> attitude/theta-rad </property>          <!--  3 -->
+  <property> attitude/psi-rad </property>            <!--  4 -->
+  <property> attitude/roll-rad </property>		   <!--  5 -->
+  <property> attitude/pitch-rad</property>		   <!--  6 -->
+  <property> attitude/heading-true-rad</property>	   <!--  7 -->
+  <property> flight-path/gamma-rad </property>       <!--  8 -->
+  <property>attitude/phi-deg</property>           <!--  9 -->
+  <property>attitude/theta-deg</property>         <!--  10 -->
+  <property>attitude/psi-deg</property>           <!--  11 -->
+  <property>flight-path/gamma-deg</property>         <!--  12 -->
+</output>

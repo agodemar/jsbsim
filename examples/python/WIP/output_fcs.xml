@@ -1,0 +1,32 @@
+<?xml version="1.0"?>                                       
+
+<output name="fcs.csv" rate="20" type="CSV">
+  <property>fcs/aileron-cmd-norm </property>              <!--  2 -->
+  <property>fcs/elevator-cmd-norm </property>		   	    <!--  3 -->
+  <property>fcs/rudder-cmd-norm </property>			    <!--  4 -->
+  <property>fcs/flap-cmd-norm </property>			   	    <!--  5 -->
+  <property>fcs/elevator-pos-rad </property>			    <!--  6 -->
+  <property>fcs/elevator-pos-deg </property>	     	    <!--  7 -->
+  <property>fcs/elevator-pos-norm </property>			    <!--  8 -->
+  <property>fcs/rudder-pos-rad </property>			    <!--  9 -->
+  <property>fcs/rudder-pos-deg </property>			    <!-- 10 -->
+  <property>fcs/rudder-pos-norm </property>			    <!-- 11 -->
+  <property>fcs/flap-pos-rad </property>				    <!-- 12 -->
+  <property>fcs/flap-pos-deg </property>				    <!-- 13 -->
+  <property>fcs/flap-pos-norm </property>				    <!-- 14 -->
+  <property>fcs/left-aileron-pos-rad </property>		    <!-- 15 -->
+  <property>fcs/left-aileron-pos-deg </property>		    <!-- 16 -->
+  <property>fcs/left-aileron-pos-norm </property>		    <!-- 17 -->
+  <property>fcs/right-aileron-pos-rad </property>		    <!-- 18 -->
+  <property>fcs/right-aileron-pos-deg </property>		    <!-- 19 -->
+  <property>fcs/right-aileron-pos-norm </property>	    <!-- 20 -->
+  <property>fcs/throttle-cmd-norm</property>			    <!-- 21 -->
+  <property>fcs/throttle-pos-norm</property>			    <!-- 22 -->
+  <property>fcs/pitch-trim-cmd-norm</property>            <!-- 23 -->
+  <property>fcs/pitch-trim-sum</property>			        <!-- 24 -->
+  <property>fcs/pitch-effective-sum</property>            <!-- 25 -->
+  <property>fcs/elevator-effective-pos-rad</property>     <!-- 26 -->
+  <property>fcs/tab-trim-sum</property>                   <!-- 27 -->
+  <property>fcs/tab-pos-rad</property>                    <!-- 28 -->
+  <property>fcs/elevator-effective-pos-deg</property>    <!-- 29 -->
+</output>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>                                       
+
+<output name="propulsion.csv" rate="20" type="CSV">
+  <property>propulsion/tank/contents-lbs</property>						<!--  2 -->
+  <property>propulsion/tank[1]/contents-lbs</property>					<!--  3 -->
+  <property>propulsion/starter_cmd</property>								<!--  4 -->
+  <property>propulsion/magneto_cmd</property>								<!--  5 -->
+  <property>propulsion/active_engine</property>							<!--  6 -->
+  <property>propulsion/total-fuel-lbs</property>							<!--  7 -->
+  <property>propulsion/engine/pitch-angle-rad</property>					<!--  8 -->
+  <property>propulsion/engine/yaw-angle-rad</property>					<!--  9 -->
+  <property>propulsion/engine/advance-ratio</property>					<!-- 10 -->
+  <property>propulsion/engine/blade-angle</property>						<!-- 11 -->
+  <property>propulsion/engine/thrust-coefficient</property>				<!-- 12 -->
+  <property>propulsion/engine/propeller-rpm</property>					<!-- 13 -->
+  <property>propulsion/engine/helical-tip-Mach</property>					<!-- 14 -->
+  <property>propulsion/engine/constant-speed-mode</property>				<!-- 15 -->
+  <property>propulsion/engine/prop-induced-velocity_fps</property>		<!-- 16 -->
+  <property>propulsion/engine/thrust-lbs</property>						<!-- 17 -->
+  <property>propulsion/engine/fuel-flow-rate-pps</property>				<!-- 18 -->
+  <property>propulsion/engine/power-hp</property>							<!-- 19 -->
+  <property>propulsion/engine/bsfc-lbs_hphr</property>					<!-- 20 -->
+  <property>propulsion/engine/volumetric-efficiency</property>			<!-- 21 -->
+  <property>propulsion/engine/map-pa</property>							<!-- 22 -->
+  <property>propulsion/engine/map-inhg</property>							<!-- 23 -->
+  <property>propulsion/engine/air-intake-impedance-factor</property>		<!-- 24 -->
+  <property>propulsion/engine/ram-air-factor</property>					<!-- 25 -->
+  <property>propulsion/engine/boost-speed</property>						<!-- 26 -->
+  <property>fcs/throttle-cmd-norm</property>			   					<!-- 27 -->
+  <property>fcs/throttle-pos-norm</property>			   					<!-- 28 -->
+  <property>ap/throttle-cmd-norm</property>                   <!-- 29 -->
+</output>

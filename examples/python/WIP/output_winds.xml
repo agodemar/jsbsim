@@ -1,0 +1,20 @@
+<?xml version="1.0"?>                                       
+
+<output name="winds.csv" rate="20" type="CSV">
+  <property>atmosphere/wind-north-fps</property>
+  <property>atmosphere/wind-east-fps</property>
+  <property>atmosphere/wind-down-fps</property>
+  <property>atmosphere/wind-mag-fps</property>
+  <property>atmosphere/psiw-rad</property>
+  <property>atmosphere/wind-x-fps</property>
+  <property>atmosphere/wind-y-fps</property>
+  <property>atmosphere/wind-z-fps</property>
+  <property>atmosphere/wind-north-kts</property>
+  <property>atmosphere/wind-east-kts</property>
+  <property>atmosphere/wind-down-kts</property>
+  <property>atmosphere/wind-mag-kts</property>
+  <property>atmosphere/psiw-deg</property>
+  <property>atmosphere/wind-x-kts</property>
+  <property>atmosphere/wind-y-kts</property>
+  <property>atmosphere/wind-z-kts</property>
+</output>
