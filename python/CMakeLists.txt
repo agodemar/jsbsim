@@ -133,6 +133,8 @@ add_subdirectory(fpectl)
 # Install the JSBSim Python module
 if (INSTALL_JSBSIM_PYTHON_MODULE)
   execute_process(COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/findInstallDir.py OUTPUT_VARIABLE PYTHON_INSTALL_DIR)
+  # To avoid unescaped Windows backslashes in Python install path:
+  file(TO_CMAKE_PATH "${PYTHON_INSTALL_DIR}" PYTHON_INSTALL_DIR)
   file(MAKE_DIRECTORY ${PYTHON_INSTALL_DIR}/jsbsim)
   install(DIRECTORY ${JSBSIM_TEST_PACKAGE_DIR} DESTINATION ${PYTHON_INSTALL_DIR} COMPONENT pymodules)
 endif()
