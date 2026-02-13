@@ -203,6 +203,7 @@ cdef extern from "FGFDMExec.h" namespace "JSBSim":
         c_FGFDMExec(c_FGPropertyManager* root, unsigned int* fdmctr)
         void Unbind() except +convertJSBSimToPyExc
         bool Run() except +convertJSBSimToPyExc
+        bool Run(const vector[int]& selectedModels) except +convertJSBSimToPyExc
         bool RunIC() except +convertJSBSimToPyExc
         bool LoadModel(string model,
                        bool add_model_to_path) except +convertJSBSimToPyExc

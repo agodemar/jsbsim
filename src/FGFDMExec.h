@@ -247,6 +247,13 @@ public:
       @return true if successful, false if sim should be ended  */
   bool Run(void);
 
+  /** This function executes only the selected models.
+      @param selectedModels A vector of eModels indices specifying which
+             models to run. Models are executed in the order they appear
+             in the vector.
+      @return true if successful, false if sim should be ended  */
+  bool Run(const std::vector<int>& selectedModels);
+
   /** Initializes the sim from the initial condition object and executes
       each scheduled model without integrating i.e. dt=0.
       @return true if successful */
@@ -560,7 +567,7 @@ public:
 
   /** Returns the simulation suspension state.
       @return true if suspended, false if executing  */
-  bool IntegrationSuspended(void) const {return dT == 0.0;}
+  bool IntegrationSuspended(void) const {return dT == 0;}
 
   /** Sets the current sim time.
       @param cur_time the current time

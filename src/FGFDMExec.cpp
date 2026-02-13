@@ -1,4 +1,3 @@
-
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
  Module:       FGFDMExec.cpp
@@ -429,6 +428,34 @@ bool FGFDMExec::Run(void)
   return success;
 }
 
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+bool FGFDMExec::Run(const std::vector<int>& selectedModels)
+{
+  bool success=true;
+
+  Debug(2);
+
+  for (auto &ChildFDM: ChildFDMList) {
+    ChildFDM->AssignState(Propagate); // Transfer state to the child FDM
+    ChildFDM->Run();
+  }
+
+  IncrTime();
+
+  // returns true if success, false if complete
+  if (Script && !IntegrationSuspended()) success = Script->RunScript();
+
+  for (int idx : selectedModels) {
+    if (idx >= 0 && idx < static_cast<int>(Models.size())) {
+      LoadInputs(static_cast<unsigned int>(idx));
+      Models[idx]->Run(holding);
+    }
+  }
+
+  if (Terminate) success = false;
+
+  return success;
+}
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 void FGFDMExec::LoadInputs(unsigned int idx)

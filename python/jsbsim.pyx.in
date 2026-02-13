@@ -779,6 +779,38 @@ cdef class FGFDMExec(FGJSBBase):
         """@Dox(JSBSim::FGFDMExec::Run)"""
         return self.thisptr.Run()
 
+    def run_models(self, selected_models: list[int]) -> bool:
+        """Execute a simulation step running only the specified models.
+
+           Instead of running all models, only the models whose indices are
+           provided in *selected_models* are executed.  Use the ``eModels``
+           enum values to identify each model:
+
+           - 0: ePropagate
+           - 1: eInput
+           - 2: eInertial
+           - 3: eAtmosphere
+           - 4: eWinds
+           - 5: eSystems
+           - 6: eMassBalance
+           - 7: eAuxiliary
+           - 8: ePropulsion
+           - 9: eAerodynamics
+           - 10: eGroundReactions
+           - 11: eExternalReactions
+           - 12: eBuoyantForces
+           - 13: eAircraft
+           - 14: eAccelerations
+           - 15: eOutput
+
+           :param selected_models: A list of model indices to run.
+           :return: True if successful, False if the sim should end.
+        """
+        cdef vector[int] models_vec
+        for m in selected_models:
+            models_vec.push_back(m)
+        return self.thisptr.Run(models_vec)
+
     def run_ic(self) -> bool:
         """@Dox(JSBSim::FGFDMExec::RunIC)"""
         return  self.thisptr.RunIC()
