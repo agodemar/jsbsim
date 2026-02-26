@@ -1,0 +1,458 @@
+{
+	"version": "1.0.0",
+	"metadata": {
+		"created": "2026-02-26T17:15:15.220Z",
+		"modified": "2026-02-26T17:15:15.220Z",
+		"name": "test_03_pathview_graph"
+	},
+	"graph": {
+		"nodes": [
+			{
+				"id": "b6ec4c74-4cfb-4a35-b6aa-8210bbc34ae6",
+				"type": "Source",
+				"name": "Trim Elevator Cmd: $\\delta_\\text{cmd-e,0}$",
+				"position": {
+					"x": 260,
+					"y": 270
+				},
+				"inputs": [],
+				"outputs": [
+					{
+						"id": "b6ec4c74-4cfb-4a35-b6aa-8210bbc34ae6-output-0",
+						"nodeId": "b6ec4c74-4cfb-4a35-b6aa-8210bbc34ae6",
+						"name": "out",
+						"direction": "output",
+						"index": 0,
+						"color": "#969696"
+					}
+				],
+				"params": {
+					"func": "f_elevator_command_at_trim",
+					"_showOutputLabels": false
+				}
+			},
+			{
+				"id": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+				"type": "Adder",
+				"name": "Adder $\\Sigma$:",
+				"position": {
+					"x": 430,
+					"y": 310
+				},
+				"inputs": [
+					{
+						"id": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd-input-0",
+						"nodeId": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+						"name": "+",
+						"direction": "input",
+						"index": 0,
+						"color": "#969696"
+					},
+					{
+						"id": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd-input-1",
+						"nodeId": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+						"name": "+",
+						"direction": "input",
+						"index": 1,
+						"color": "#969696"
+					}
+				],
+				"outputs": [
+					{
+						"id": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd-output-0",
+						"nodeId": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+						"name": "out",
+						"direction": "output",
+						"index": 0,
+						"color": "#969696"
+					}
+				],
+				"params": {
+					"operations": "'++'"
+				}
+			},
+			{
+				"id": "a9c1fa10-7c06-48e0-a174-592d08723645",
+				"type": "StepSource",
+				"name": "Command $\\Delta\\delta_\\text{cmd-e}(t)$",
+				"position": {
+					"x": 250,
+					"y": 360
+				},
+				"inputs": [],
+				"outputs": [
+					{
+						"id": "a9c1fa10-7c06-48e0-a174-592d08723645-output-0",
+						"nodeId": "a9c1fa10-7c06-48e0-a174-592d08723645",
+						"name": "out",
+						"direction": "output",
+						"index": 0,
+						"color": "#969696"
+					}
+				],
+				"params": {
+					"amplitude": "[-0.1, 0, 0.1, 0]",
+					"tau": "[10, 11, 12, 13]"
+				}
+			},
+			{
+				"id": "2531539e-4bf3-4862-b389-fa07d7078a86",
+				"type": "Amplifier",
+				"name": "Amplifier: $\\times 100$",
+				"position": {
+					"x": 810,
+					"y": 300
+				},
+				"inputs": [
+					{
+						"id": "2531539e-4bf3-4862-b389-fa07d7078a86-input-0",
+						"nodeId": "2531539e-4bf3-4862-b389-fa07d7078a86",
+						"name": "in 0",
+						"direction": "input",
+						"index": 0,
+						"color": "#969696"
+					},
+					{
+						"id": "2531539e-4bf3-4862-b389-fa07d7078a86-input-1",
+						"nodeId": "2531539e-4bf3-4862-b389-fa07d7078a86",
+						"name": "in 1",
+						"direction": "input",
+						"index": 1,
+						"color": "#969696"
+					}
+				],
+				"outputs": [
+					{
+						"id": "2531539e-4bf3-4862-b389-fa07d7078a86-output-0",
+						"nodeId": "2531539e-4bf3-4862-b389-fa07d7078a86",
+						"name": "out 0",
+						"direction": "output",
+						"index": 0,
+						"color": "#969696"
+					},
+					{
+						"id": "2531539e-4bf3-4862-b389-fa07d7078a86-output-1",
+						"nodeId": "2531539e-4bf3-4862-b389-fa07d7078a86",
+						"name": "out 1",
+						"direction": "output",
+						"index": 1,
+						"color": "#969696"
+					}
+				],
+				"params": {
+					"gain": "100"
+				}
+			},
+			{
+				"id": "e96a1d34-352d-4499-8720-8649bcab2cb1",
+				"type": "Function",
+				"name": "$\\alpha = f\\big(\\delta_\\text{cmd-T}(t),\\delta_\\text{cmd-e}(t)\\big)$",
+				"position": {
+					"x": 860,
+					"y": 200
+				},
+				"inputs": [
+					{
+						"id": "e96a1d34-352d-4499-8720-8649bcab2cb1-input-0",
+						"nodeId": "e96a1d34-352d-4499-8720-8649bcab2cb1",
+						"name": "in 0",
+						"direction": "input",
+						"index": 0,
+						"color": "#969696"
+					},
+					{
+						"id": "e96a1d34-352d-4499-8720-8649bcab2cb1-input-1",
+						"nodeId": "e96a1d34-352d-4499-8720-8649bcab2cb1",
+						"name": "in 1",
+						"direction": "input",
+						"index": 1,
+						"color": "#969696"
+					}
+				],
+				"outputs": [
+					{
+						"id": "e96a1d34-352d-4499-8720-8649bcab2cb1-output-0",
+						"nodeId": "e96a1d34-352d-4499-8720-8649bcab2cb1",
+						"name": "out 0",
+						"direction": "output",
+						"index": 0,
+						"color": "#969696"
+					}
+				],
+				"params": {
+					"func": "f_aircraft"
+				},
+				"color": "#F06292"
+			},
+			{
+				"id": "4756d948-7ea6-4a82-bbdc-e9423aa33b4a",
+				"type": "Scope",
+				"name": "AoA $\\alpha(t)$",
+				"position": {
+					"x": 1040,
+					"y": 200
+				},
+				"inputs": [
+					{
+						"id": "4756d948-7ea6-4a82-bbdc-e9423aa33b4a-input-0",
+						"nodeId": "4756d948-7ea6-4a82-bbdc-e9423aa33b4a",
+						"name": "in 0",
+						"direction": "input",
+						"index": 0,
+						"color": "#969696"
+					}
+				],
+				"outputs": [],
+				"params": {}
+			},
+			{
+				"id": "eccf0c1d-2701-493c-be25-c2246ecee94e",
+				"type": "Scope",
+				"name": "Commands (Perc.) $\\delta_\\text{cmd-T}(t)$, $\\delta_\\text{cmd-e}(t)$",
+				"position": {
+					"x": 1000,
+					"y": 300
+				},
+				"inputs": [
+					{
+						"id": "eccf0c1d-2701-493c-be25-c2246ecee94e-input-0",
+						"nodeId": "eccf0c1d-2701-493c-be25-c2246ecee94e",
+						"name": "in 0",
+						"direction": "input",
+						"index": 0,
+						"color": "#969696"
+					},
+					{
+						"id": "eccf0c1d-2701-493c-be25-c2246ecee94e-input-1",
+						"nodeId": "eccf0c1d-2701-493c-be25-c2246ecee94e",
+						"name": "in 1",
+						"direction": "input",
+						"index": 1,
+						"color": "#969696"
+					}
+				],
+				"outputs": [],
+				"params": {}
+			},
+			{
+				"id": "31ac7aed-e97c-49e5-b628-ad289d807862",
+				"type": "Source",
+				"name": "Trim Throttle Cmd: $\\delta_\\text{cmd-T,0}$",
+				"position": {
+					"x": 460,
+					"y": 140
+				},
+				"inputs": [],
+				"outputs": [
+					{
+						"id": "31ac7aed-e97c-49e5-b628-ad289d807862-output-0",
+						"nodeId": "31ac7aed-e97c-49e5-b628-ad289d807862",
+						"name": "out",
+						"direction": "output",
+						"index": 0,
+						"color": "#969696"
+					}
+				],
+				"params": {
+					"func": "f_trottle_command_at_trim",
+					"_showOutputLabels": false
+				}
+			}
+		],
+		"connections": [
+			{
+				"id": "08c530bd-d1ec-4a14-b11d-5d3b47116ca6",
+				"sourceNodeId": "b6ec4c74-4cfb-4a35-b6aa-8210bbc34ae6",
+				"sourcePortIndex": 0,
+				"targetNodeId": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+				"targetPortIndex": 0
+			},
+			{
+				"id": "96754ad3-d429-45ab-b1ba-c814c5343409",
+				"sourceNodeId": "a9c1fa10-7c06-48e0-a174-592d08723645",
+				"sourcePortIndex": 0,
+				"targetNodeId": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+				"targetPortIndex": 1
+			},
+			{
+				"id": "af89db37-2180-4177-b520-3b750de7bd92",
+				"sourceNodeId": "e96a1d34-352d-4499-8720-8649bcab2cb1",
+				"sourcePortIndex": 0,
+				"targetNodeId": "4756d948-7ea6-4a82-bbdc-e9423aa33b4a",
+				"targetPortIndex": 0
+			},
+			{
+				"id": "c88744c2-0cee-4745-b04d-006fb14e75f0",
+				"sourceNodeId": "2531539e-4bf3-4862-b389-fa07d7078a86",
+				"sourcePortIndex": 0,
+				"targetNodeId": "eccf0c1d-2701-493c-be25-c2246ecee94e",
+				"targetPortIndex": 0
+			},
+			{
+				"id": "03a7ce2d-d6d4-4e09-879a-b1fe3721f23c",
+				"sourceNodeId": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+				"sourcePortIndex": 0,
+				"targetNodeId": "e96a1d34-352d-4499-8720-8649bcab2cb1",
+				"targetPortIndex": 1,
+				"waypoints": [
+					{
+						"id": "920c4071-4310-4b09-8229-979ff74b57b2",
+						"position": {
+							"x": 690,
+							"y": 260
+						},
+						"isUserWaypoint": true
+					}
+				]
+			},
+			{
+				"id": "deb81496-e468-4243-92fc-3395ab81d3d0",
+				"sourceNodeId": "31ac7aed-e97c-49e5-b628-ad289d807862",
+				"sourcePortIndex": 0,
+				"targetNodeId": "e96a1d34-352d-4499-8720-8649bcab2cb1",
+				"targetPortIndex": 0
+			},
+			{
+				"id": "a67a0a83-efe3-4c4d-8083-e7d5827f7b17",
+				"sourceNodeId": "31ac7aed-e97c-49e5-b628-ad289d807862",
+				"sourcePortIndex": 0,
+				"targetNodeId": "2531539e-4bf3-4862-b389-fa07d7078a86",
+				"targetPortIndex": 0,
+				"waypoints": [
+					{
+						"id": "febbcd0a-200b-463d-8457-2a665831be56",
+						"position": {
+							"x": 720,
+							"y": 240
+						},
+						"isUserWaypoint": true
+					}
+				]
+			},
+			{
+				"id": "6af8b62e-f5f3-438c-ada2-718f3512d5a0",
+				"sourceNodeId": "8e6e21cf-c70d-4db2-bf63-1118ff2cbadd",
+				"sourcePortIndex": 0,
+				"targetNodeId": "2531539e-4bf3-4862-b389-fa07d7078a86",
+				"targetPortIndex": 1
+			},
+			{
+				"id": "7b5b02a9-a569-4d8d-b78b-1a236ffe12cf",
+				"sourceNodeId": "2531539e-4bf3-4862-b389-fa07d7078a86",
+				"sourcePortIndex": 1,
+				"targetNodeId": "eccf0c1d-2701-493c-be25-c2246ecee94e",
+				"targetPortIndex": 1
+			}
+		],
+		"annotations": [
+			{
+				"id": "4f6bc720-4cd7-415c-9393-87640226e2bd",
+				"position": {
+					"x": 170,
+					"y": 390
+				},
+				"content": "Normalized elevator command perturbation",
+				"width": 180,
+				"height": 60,
+				"fontSize": 12
+			},
+			{
+				"id": "9e8d81c1-1dbd-46f5-bda4-28108222ff9b",
+				"position": {
+					"x": 180,
+					"y": 180
+				},
+				"content": "Normalized elevator command at trim",
+				"width": 180,
+				"height": 60,
+				"fontSize": 12
+			},
+			{
+				"id": "ba6fbe00-f2bf-4f88-969c-9c40683f7029",
+				"position": {
+					"x": 520,
+					"y": 270
+				},
+				"content": "$\\delta_\\text{cmd-e,0} + \\Delta\\delta_\\text{cmd-e}(t)$",
+				"width": 160,
+				"height": 50,
+				"fontSize": 16
+			},
+			{
+				"id": "5cdb8468-9fe3-4413-a943-71c0780f4ecb",
+				"position": {
+					"x": 770,
+					"y": -50
+				},
+				"content": "- Instantiate the **JSBSim** objects and load the aircraft\n`fdm = jsbsim.FGFDMExec(PATH_TO_JSBSIM_FILES)`\n\n`pm = fdm.get_property_manager()`",
+				"width": 390,
+				"height": 110,
+				"fontSize": 13,
+				"color": "#F06292"
+			},
+			{
+				"id": "777c16ea-7cd2-4efc-bdd4-64b568212b6e",
+				"position": {
+					"x": 950,
+					"y": 20
+				},
+				"content": "- Passing **JSBSim** elevator command and update state\n  `fdm[\"fcs/elevator-cmd-norm\"] = $\\delta_\\text{cmd-e}(t)$`\n\n  `fdm.run()`\n",
+				"width": 460,
+				"height": 100,
+				"fontSize": 13,
+				"color": "#F06292"
+			},
+			{
+				"id": "360c5bb9-49c4-4940-9e3e-e8f5b9be2ef7",
+				"position": {
+					"x": 770,
+					"y": 70
+				},
+				"content": "- Returning AoA\n  `return pm.get_node('aero/alpha-deg').get_double_value()`",
+				"width": 480,
+				"height": 90,
+				"fontSize": 13,
+				"color": "#F06292"
+			},
+			{
+				"id": "62f81198-29ac-43c0-82db-0a6452530fd5",
+				"position": {
+					"x": 580,
+					"y": 110
+				},
+				"content": "$\\delta_\\text{cmd-T,0}$",
+				"width": 250,
+				"height": 50,
+				"fontSize": 16
+			},
+			{
+				"id": "bebe5f8a-6e17-4a5b-a5af-6a7f2c6891f0",
+				"position": {
+					"x": 370,
+					"y": 60
+				},
+				"content": "Normalized elevator command at trim",
+				"width": 180,
+				"height": 60,
+				"fontSize": 12
+			}
+		]
+	},
+	"events": [],
+	"codeContext": {
+		"code": "import os\n# make sure to: pip install jsbsim\nimport jsbsim\nimport xml.etree.ElementTree as ET\nimport matplotlib.pyplot as plt\n\n# Relative path to the directory where the flight model is stored\n# Note - Aircraft directory needs to be writeable in order to modify the cg\nPATH_TO_JSBSIM_FILES=\"../..\"\n\nprint(f'=================================================================')\nprint(f'Current working directory: {os.getcwd()}')\n\n# Global variables that must be modified to match your particular need\n# The aircraft name\n# Note - It should match the exact spelling of the model file\nAIRCRAFT_NAME=\"global5000\"\n\n# Avoid flooding the console with log messages\njsbsim.FGJSBBase().debug_lvl = 0\n\n# Instantiate the FDMExec object and load the aircraft\nfdm = jsbsim.FGFDMExec(PATH_TO_JSBSIM_FILES)\n\nload_status = fdm.load_model(AIRCRAFT_NAME)\n\npm = fdm.get_property_manager()\n\nprint(f'=================================================================')\n\nac_xml_tree = ET.parse(os.path.join(fdm.get_root_dir(), f'aircraft/{AIRCRAFT_NAME}/{AIRCRAFT_NAME}.xml'))\nac_xml_root = ac_xml_tree.getroot()\n\n# Get the empty weight from aircraft xml [assume lbs]\nfor x in ac_xml_root.findall('mass_balance'):\n        w = x.find('emptywt').text\n\nempty_weight = float(w)\n\n# Get the original CG from aircraft xml, assum inches from Construction axes origin\nfor loc in ac_xml_root.findall('mass_balance/location'):\n        x_cg_ = loc.find('x').text\n\nx_cg_0 = float(x_cg_)\n\n# Assume a payload, midweight, lb\npayload_0 = 15172/2\n\n# Fuel max for Global5000, lbm\nfuelmax = 8097.63\n\n# Assume the mass of fuel, half tanks, lb\nfuel_per_tank = fuelmax/2\n\n\n# Select a speed to run the simulation at, knots\nspeed_cas = 250\n\n# Assume a flight altitude\nh_ft_0 = 15000\n\n# Fuel max for Global5000, lbm\nfuelmax = 8097.63\n\nweight_0 = empty_weight + payload_0 + fuel_per_tank*3\n\n# Assume a zero flight path angle, gamma_0\ngamma_0 = 0\n\nprint(\"-----------------------------------------\")\nprint(\"Altitude {} ft, Weight {} lb, CoG-x {} in\".format(h_ft_0, weight_0, x_cg_0))\nprint(\"-----------------------------------------\")\nprint(\"Running simulation at initial CAS = {} kn, and Altitude = {} ft\".format(speed_cas, h_ft_0))\nprint(\"-----------------------------------------\")\n\n# Set engines running\nfdm['propulsion/set-running'] = -1\ntrim_results = []\ntrim_results_fcs = []\n\nfdm['ic/h-sl-ft'] = h_ft_0\nfdm['ic/vc-kts'] = speed_cas\nfdm['ic/gamma-deg'] = gamma_0\nfdm['propulsion/tank[0]/contents-lbs'] = fuel_per_tank\nfdm['propulsion/tank[1]/contents-lbs'] = fuel_per_tank\nfdm['propulsion/tank[2]/contents-lbs'] = fuel_per_tank\nfdm['inertia/pointmass-weight-lbs[0]'] = payload_0\n\n# Initialize the aircraft with initial conditions\nfdm.run_ic()\n\n# Run fdm model\nfdm.run()\n\n# Trim the aircraft to initial conditions\nfdm['simulation/do_simple_trim'] = 1\nfdm.run()\n\nprint(\"Appending data to trim_results ...\")\n\nprint(\"-----------------------------------------\")\n\ntrim_results.append(fdm['velocities/vc-kts'])\ntrim_results.append(fdm['aero/alpha-deg'])\ntrim_results_fcs.append(fdm['fcs/elevator-pos-rad'])\ntrim_results_fcs.append(fdm['fcs/elevator-pos-deg'])\ntrim_results_fcs.append(fdm['fcs/elevator-pos-norm'])\ntrim_results_fcs.append(fdm['fcs/throttle-cmd-norm'])\n\n# Print trim results\nprint(\"Summary of trim results:\")\nprint(\"CAS (knots): {}\\nAoA (deg): {}\".format(trim_results[0], trim_results[1]))\nprint(\"Elevator pos (rad): {}\\nElevator pos (deg): {}\\nElevator pos (norm): {}\".format(trim_results_fcs[0], trim_results_fcs[1], trim_results_fcs[2]))\nprint(\"-----------------------------------------\")\n\n# store the throttle at trim\nthrottle_cmd_0 = fdm['fcs/throttle-cmd-norm']\n\n# Print the 'fcs/throttle-cmd-norm' value\nprint(\"Throttle cmd norm: {}\".format(throttle_cmd_0))\nprint(\"-----------------------------------------\")\n\n# An example of 'Dynamical function' that takes the elevator command as input and outputs the angle of attack\ndef f_aircraft(u0, u1):\n    # feed the constant throttle command at trim to keep the engines running at the same power level as during trim\n    fdm['fcs/throttle-cmd-norm'] = u0\n    # PathSim passes u as a 1-D numpy array (shape (1,)), and recent numpy versions reject float() on non-0-dimensional arrays. \n    # The fix is to use .flat[0] to extract the scalar regardless of array shape.\n    fdm[\"fcs/elevator-cmd-norm\"] = float(np.asarray(u1).flat[0]) \n    fdm.run()\n    alpha_ = pm.get_node('aero/alpha-deg').get_double_value()\n    return alpha_\n\n# Constant signal function that outputs the elevator command (normalized) at trim\ndef f_elevator_command_at_trim(t):\n    return trim_results_fcs[2] # 'fcs/elevator-pos-norm'\n\n# Constant signal function that outputs the throttle command (normalized) at trim\ndef f_trottle_command_at_trim(t):\n    return trim_results_fcs[3] # 'fcs/throttle-cmd-norm'\n\n"
+	},
+	"simulationSettings": {
+		"duration": "40.0",
+		"dt": "0.008333",
+		"solver": "SSPRK22",
+		"adaptive": true,
+		"atol": null,
+		"rtol": null,
+		"ftol": null,
+		"dt_min": null,
+		"dt_max": "1e-2",
+		"ghostTraces": 0,
+		"plotResults": true
+	}
+}
