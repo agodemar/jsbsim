@@ -4,7 +4,15 @@ on:
   push:
     branches-ignore:
       - 'dependabot/**'
+    paths-ignore:
+      - "**/*.md"
+      - "joss_paper/**"
+      - "**/*.ipynb"
   pull_request:
+    paths-ignore:
+      - "**/*.md"
+      - "joss_paper/**"
+      - "**/*.ipynb"
 
 env:
   release: ${{ github.event_name == 'push' && (github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/tags/')) }}
@@ -465,7 +473,7 @@ jobs:
           pip install -r python/requirements.txt
           pip install build lark
       - name: Set up Julia
-        uses: julia-actions/setup-julia@v2
+        uses: julia-actions/setup-julia@v3
       - name: Install & Configure Doxygen
         if: env.release == 'true'
         run: |
@@ -668,7 +676,7 @@ jobs:
           find . -type f -name *.exe -exec cp {} dist/. \;
           find . -type f -name *.deb -exec cp {} dist/. \;
       - name: Rolling release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -724,7 +732,7 @@ jobs:
           export MSVC_VERSION=`cat MSVC_version.txt`
           echo "MSVC_VERSION=$MSVC_VERSION" >> $GITHUB_ENV
       - name: GitHub release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -846,7 +854,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v6
       - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           # upload entire directory
           path: 'build/documentation/html'
